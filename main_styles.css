@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+
+h1 {
+    color: white;
+    font-family: consolas;
+}
+p {
+    color: white;
+    font-family: consolas;
+}
+
+/** Navigation Bar #Realistically most of this should go into the other side of things. **/
+nav {
+    background-color: rgba(112,146,190,1);
+    overflow: hidden;
+    display: flex;
+}
+
+.main-logo {
+    flex: 1;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.0rem;
+}
+
+nav ul {
+    float: left;
+    flex: 4;
+    display: flex;
+}
+
+nav li {
+    list-style: none;
+    flex: 1;
+}
+
+/** Dark-Light Slider Styling **/
+nav .DLtoggle_checkbox {
+    flex: 1;
+}
+
+/** Media Queries **/

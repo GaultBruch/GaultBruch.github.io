@@ -1,25 +1,105 @@
+* {
+ margin:0;
+ padding:0;   
+ box-sizing: border-box;
+ font-family: consolas;
+}
+
+:root {
+    /** Dark Palette **/
+    --border-orange: rgb(167, 89, 0);
+    --background-blue: rgba(112,146,190,1);
+    --dark-blue: rgba(79, 104, 136,0.95);
+    --light-blue-border: rgb(154, 180, 214);
+    --card-color: lavender;
+
+    /** Light Palette **/
+    
+}
+
 body {
-    background-color: black;
+    background: linear-gradient(135deg, rgba(0,0,0,1),rgb(12, 58, 58));
+}
+
+/** typewriter effect styles **/
+.type {
+    position: relative;
+    color:#0000;
+    background:
+      linear-gradient(-90deg,#ffffff 3px,#0000 0) 10px 0,
+      linear-gradient(#ffffff 0 0) 0 0;
+    background-size:calc(var(--n)*1ch) 200%;
+    -webkit-background-clip:padding-box,text;
+    background-clip:padding-box,text;
+    background-repeat:no-repeat;
+    animation: 
+     blink-type .7s steps(1) infinite,   
+     typing calc(var(--n)*.15s) steps(var(--n)) forwards,
+     opac-fix forwards;
+     animation-delay: 2s;
+     opacity: 0;
+}
+
+.type::after {
+    margin-right: 1rem;
+    content: "";
+    position: absolute;
+    right: -5px;
+    width: 2px;
+    height: 1em;
+    border-right: 2px solid white;
+    animation: blink 1s infinite steps(1);
+}
+
+@keyframes opac-fix {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes typing {
+    from {background-size: 0 200%}
+}
+
+@keyframes blink-type{
+    
+    50% {background-position: 0 -100%, 0 0}
+}
+
+@keyframes blink {
+    0% {opacity:0;}
+    50% {opacity: 1;}
 }
 
 
+/** Normal Page Stylings **/
 h1 {
     color: white;
     font-family: consolas;
+    margin: 2vh;
 }
-p {
+
+h1 ~ p {
+    margin: 2vh;
     color: white;
     font-family: consolas;
+}
+
+h2 {
+    color: white;
 }
 
 /** Navigation Bar #Realistically most of this should go into the other side of things. **/
 nav {
+    padding: 0em 0em 0em 0em;
+    margin: 0em 0em 0em 0em;
+    height: 4rem;
     background-color: rgba(112,146,190,1);
     overflow: hidden;
     display: flex;
 }
 
 .main-logo {
+    margin-top: 1rem;
     flex: 1;
 }
 
@@ -41,8 +121,148 @@ nav li {
 }
 
 /** Dark-Light Slider Styling **/
-nav .DLtoggle_checkbox {
-    flex: 1;
+nav .DLtoggle-checkbox {
+    display: none;
+}
+
+nav .DLtoggle-checkbox:checked .toggle-label:before {
+    background: white;
+    border-color: black;
+    animation-name: switch;
+    animation-duration: 350ms;
+    animation-fill-mode:forwards;
+}
+
+nav .toggle-label {
+    display: none; /** hidding DL toggle for now **/
+    margin-top: 1rem;
+    width: 20vw;
+    height: 6vh;
+    background: var(--dark-blue);
+    border-radius: 50px;
+    border: 3px solid var(--light-blue-border);
+    transition: all 350ms ease-in;
+}
+
+nav .toggle-label:before { /** This code is shamelessly stolen from a daily dev tips article for
+    css only toggle switching https://daily-dev-tips.com/posts/creating-day-night-css-only-toggle-switch/ **/
+    animation-name: reverse;
+    animation-duration: 350ms;
+    animation-fill-mode: forwards;
+    transition: all 350ms ease-in;
+    content: '';
+    width: 5vw;
+    height: 5vw;
+    border: 2px solid white;
+    background: black;
+    position: absolute;
+    top: 4.3vh;
+    left: 60.5vw;
+    border-radius: 100px;
+}
+
+nav .burger-icon {
+    display: none;
+}
+
+nav a.burger-icon {
+    font-size: 2.5rem;
+
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); /** too large on smallest screens, rewrite **/
+    grid-gap: 2rem;
+    border: rgb(167, 89, 0) solid 3px;
+    border-radius:3rem;
+    padding: 2rem;
+    background-color: rgba(112,146,190,1);
+    margin: 3rem;
+}
+
+.card {
+    background: lavender;
+    padding: 1rem;
+    border: solid black 2px;
+    width: 30vw;
 }
 
 /** Media Queries **/
+
+@media screen and (max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .burger-icon {
+        display: block;
+        margin: 0;
+        padding: 0.6rem 1rem;
+    }
+
+    nav.toggled {position: relative;}
+
+    nav.toggled ul {
+        position: fixed;
+        width: 100%;
+        height: 40vh;
+        background: rgba(79, 104, 136,0.95);
+        top: 4rem;
+        display: block;
+        text-align: center;
+    }
+
+    
+    nav.toggled ul a,nav.toggled ul li {
+        font-size: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .project-cards {
+        padding: 1rem;
+        margin:1rem;
+    }
+
+    .card {
+        margin: 1rem;
+        padding: 1rem;
+        width: 68vw;
+    }
+
+
+}
+
+
+/** Animations **/
+@keyframes reverse {
+    0% {
+        left: 75vw;
+        width: 5vw;
+    }
+
+    60% {
+        left: 66vw;
+        width: 6vw;
+    }
+
+    100% {
+        left: 60.5vw;
+    }
+}
+
+@keyframes switch {
+    0% {
+        left: 60.5vw;
+    }
+
+    60% {
+        left: 66vw;
+        width: 6vw;
+    }
+
+    100% {
+        left: 75vw;
+        width: 5vw;
+    }
+}

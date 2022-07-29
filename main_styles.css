@@ -14,41 +14,48 @@
     --card-color: lavender;
 
     /** Light Palette **/
+
+    /** Blue-Purple Palette **/
+    --background-blue: rgb(19, 6, 36);
     
 }
 
 body {
-    background: linear-gradient(135deg, rgba(0,0,0,1),rgb(12, 58, 58));
+    /*background: linear-gradient(135deg, rgba(0,0,0,1),rgb(12, 58, 58)); */
+    background-color: rgb(6, 7, 36);
 }
 
 /** typewriter effect styles **/
 .type {
+    width: fit-content;
     position: relative;
-    color:#0000;
-    background:
-      linear-gradient(-90deg,#ffffff 3px,#0000 0) 10px 0,
-      linear-gradient(#ffffff 0 0) 0 0;
-    background-size:calc(var(--n)*1ch) 200%;
-    -webkit-background-clip:padding-box,text;
-    background-clip:padding-box,text;
-    background-repeat:no-repeat;
-    animation: 
-     blink-type .7s steps(1) infinite,   
-     typing calc(var(--n)*.15s) steps(var(--n)) forwards,
-     opac-fix forwards;
-     animation-delay: 2s;
-     opacity: 0;
+    /**empty for now **/ 
 }
 
 .type::after {
     margin-right: 1rem;
     content: "";
     position: absolute;
-    right: -5px;
+    right: -1.3rem;
     width: 2px;
     height: 1em;
+    
+}
+
+.typing::after {
+    
+    line-height: 0;
+    position: absolute;
+    
+}
+
+.typedone::after {
     border-right: 2px solid white;
     animation: blink 1s infinite steps(1);
+}
+
+a.inlinetyper {
+    color: white;
 }
 
 @keyframes opac-fix {
@@ -73,19 +80,60 @@ body {
 
 /** Normal Page Stylings **/
 h1 {
+    width: fit-content;
     color: white;
     font-family: consolas;
-    margin: 2vh;
+    margin-top: 2vh;
+    margin-left: 2vh;
+}
+
+h1.starterh1 {
+    display: inline-block;
 }
 
 h1 ~ p {
+    height: 4vh;
     margin: 2vh;
     color: white;
     font-family: consolas;
 }
+section {
+    min-height: 50vh;
+}
+
+section #resume-links {
+    display: flex;
+    width: 80vw;
+    margin: auto;
+    opacity: 0;
+    animation: opac-fix 1s forwards;
+    animation-delay: 20s;
+}
 
 h2 {
+    height: 5vh;
+    margin: 2vh;
     color: white;
+}
+
+section #resume-links {
+    padding-top: 20vh;
+    justify-content: center;
+}
+
+section #resume-links a {
+    text-align: center;
+    max-width: 40vw;
+    width: 20rem;
+    font-size: 1.5rem;
+    
+    text-decoration: none;
+    padding: 0.5rem;
+    margin: 1rem;
+    border: 3px solid rgb(12, 58, 58);
+    background-color:rgb(8, 19, 36);
+    border-radius: 10px;
+    color: white; 
 }
 
 /** Navigation Bar #Realistically most of this should go into the other side of things. **/
@@ -93,7 +141,7 @@ nav {
     padding: 0em 0em 0em 0em;
     margin: 0em 0em 0em 0em;
     height: 4rem;
-    background-color: rgba(112,146,190,1);
+    background-color: rgba(25, 41, 78, 0.555);
     overflow: hidden;
     display: flex;
 }
@@ -104,14 +152,26 @@ nav {
 }
 
 nav a {
-    color: black;
+    /** this all needs to be updated, looks ugly as sin, especially on phone **/
+    color: white;
+    
     text-decoration: none;
-    font-size: 1.0rem;
+    font-size: 1.2rem;
+    margin: 1.4rem 1rem;
+    padding: 0.4rem;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+    
+    /*background-color:rgba(79, 104, 136, 0.95);*/
+}
+nav a:hover {
+    background-color:rgb(6, 103, 238)
 }
 
 nav ul {
-    float: left;
-    flex: 4;
+    /*margin: 1.4rem 1rem; */
+    padding: 1.4rem 0;
+    float: right;
     display: flex;
 }
 
@@ -170,35 +230,127 @@ nav a.burger-icon {
 
 }
 
+.project-list {
+    margin: 0rem 0;
+}
+.project-list h2 {
+    font-size: 3rem;
+}
+
+/* Projects styling */ 
 .project-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr)); /** too large on smallest screens, rewrite **/
-    grid-gap: 2rem;
-    border: rgb(167, 89, 0) solid 3px;
-    border-radius:3rem;
-    padding: 2rem;
-    background-color: rgba(112,146,190,1);
-    margin: 3rem;
+    background-color: rgb(20, 19, 65); 
+    margin: 0;
+    padding: 3rem;
 }
 
 .card {
-    background: lavender;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+    color: lavender; /*rgb(230, 229, 231); */
+    border-bottom: solid rgb(0, 0, 0) 2px;
+    margin: 1rem 2rem;
     padding: 1rem;
-    border: solid black 2px;
-    width: 30vw;
+    min-width: min-content;
+    max-width: 70%;
+    box-shadow: 0 0 25px 10px rgba(8, 19, 36, 1);
+}
+
+.card h3 {
+    text-align: center;
+}
+
+.card a {
+    margin: 1rem 0;
+}
+
+.card .discussionCol {
+    display: grid;
+    row-gap: 3rem;
+}
+
+.card .displayCol a {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.projectSublinks {
+    display: flex;
+}
+
+.card .displayCol .projectSublinks a {
+    text-decoration: none;
+    color: rgb(0, 240, 220);
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+}
+
+.projectSublinks a:hover {
+    background: rgb(9, 121, 173);
+}
+
+.card .displayCol ul {
+    margin: 2rem;
+}
+
+section.TechLogos {
+    padding: 1rem;
+    margin: 3rem 0;
+    box-shadow: 0 0 25px 10px rgba(138, 138, 138, 0.473);
+    display: flex;
+    background: rgba(248, 248, 248, 0.397);
+    height: fit-content;
+    min-height: unset;
+} 
+
+section.TechLogos img {
+    margin: 1rem;
+}
+
+#wordleClone {
+    background-image: url('images/WordleClone.PNG');
+    width: 250px;
+    height: 310px;
+    background-repeat:no-repeat;
+    display: block;
+}
+
+#collaboards {
+    background-image: url('images/Collaboards.PNG');
+    background-size: cover;
+    width: 30vh;
+    height: 16vh;
+    background-repeat:no-repeat;
+    display: block;
 }
 
 /** Media Queries **/
 
 @media screen and (max-width: 900px) {
+    body {
+        
+    }
+
     nav ul {
         display: none;
+        margin: 0;
+        z-index: 1;
+    }
+
+    nav a {
+        border: none;
+        padding: 0;
+        background-color: transparent;
     }
 
     nav .burger-icon {
         display: block;
         margin: 0;
         padding: 0.6rem 1rem;
+        color:rgb(179, 179, 179);
     }
 
     nav.toggled {position: relative;}
@@ -206,7 +358,7 @@ nav a.burger-icon {
     nav.toggled ul {
         position: fixed;
         width: 100%;
-        height: 40vh;
+        height: 25vh;
         background: rgba(79, 104, 136,0.95);
         top: 4rem;
         display: block;
@@ -220,49 +372,18 @@ nav a.burger-icon {
     }
 
     .project-cards {
+        margin: 0;
         padding: 1rem;
-        margin:1rem;
     }
 
-    .card {
-        margin: 1rem;
-        padding: 1rem;
-        width: 68vw;
-    }
+    
 
 
 }
 
 
 /** Animations **/
-@keyframes reverse {
-    0% {
-        left: 75vw;
-        width: 5vw;
-    }
-
-    60% {
-        left: 66vw;
-        width: 6vw;
-    }
-
-    100% {
-        left: 60.5vw;
-    }
-}
-
-@keyframes switch {
-    0% {
-        left: 60.5vw;
-    }
-
-    60% {
-        left: 66vw;
-        width: 6vw;
-    }
-
-    100% {
-        left: 75vw;
-        width: 5vw;
-    }
+@keyframes fade-elem-in {
+    0% {opacity:0;}
+    100% {opacity:1;}
 }

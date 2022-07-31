@@ -232,14 +232,14 @@ main .project-list .project-cards .card a {
   margin: 1rem 0;
 }
 main .project-list .project-cards .card .displayCol #wordleClone {
-  background-image: url("../images/WordleClone.PNG");
+  background-image: url("../../images/WordleClone.PNG");
   width: 250px;
   height: 310px;
   background-repeat: no-repeat;
   display: block;
 }
 main .project-list .project-cards .card .displayCol #collaboards {
-  background-image: url("../images/Collaboards.PNG");
+  background-image: url("../../images/Collaboards.PNG");
   width: 90vw;
   height: 30vh;
   background-size: contain;

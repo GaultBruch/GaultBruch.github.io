@@ -294,7 +294,7 @@ section.TechLogos img {
 }
 
 #wordleClone {
-    background-image: url('images/WordleClone.PNG');
+    background-image: url('./images/WordleClone.PNG');
     width: 250px;
     height: 310px;
     background-repeat:no-repeat;

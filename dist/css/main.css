@@ -1,0 +1,418 @@
+@charset "UTF-8";
+.home {
+  height: 66vh;
+  padding: 5vh 0 10vh 0;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 5;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger {
+  position: absolute;
+  right: 0;
+  top: 0.5rem;
+  width: 28px;
+  height: 3px;
+  background: lavender;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::before {
+  content: "";
+  position: absolute;
+  top: -8px;
+  width: 28px;
+  height: 3px;
+  background: lavender;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  width: 28px;
+  height: 3px;
+  background: lavender;
+  transition: all 0.5s ease-in-out;
+}
+.menu-btn__burger.toggled {
+  transform: rotate(720deg);
+  background: transparent;
+  size: 0;
+}
+.menu-btn__burger.toggled::before {
+  transform: rotate(45deg) translate(5px, 6px);
+}
+.menu-btn__burger.toggled::after {
+  transform: rotate(-45deg) translate(5px, -6px);
+}
+
+header nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.9);
+  opacity: 1;
+  visibility: hidden;
+}
+header nav.toggled {
+  visibility: visible;
+}
+header nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: transparent;
+  list-style-type: none;
+  padding-right: 1rem;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+header nav ul.toggled {
+  transform: translateY(0%);
+}
+header nav ul li {
+  padding: 5vh;
+}
+header nav ul li a.menu-nav__link {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  transition: all 0.5s ease-in-out;
+}
+header nav ul li a.menu-nav__link:hover {
+  background-color: rgb(6, 103, 238);
+}
+header nav ul li a.menu-nav__link:hover {
+  background: rgb(6, 103, 238);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(6, 7, 36);
+  color: lavender;
+  height: 100vh;
+  font-family: consolas;
+  line-height: 1;
+}
+a {
+  color: lavender;
+  text-decoration: none;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+}
+@media (min-width: 900px) {
+  main {
+    font-size: 1.2rem;
+  }
+}
+main #resume-links {
+  padding-top: 10vh;
+  justify-content: center;
+  display: flex;
+  width: 80vw;
+  margin: auto;
+  opacity: 0;
+  -webkit-animation: opac-fix 2s forwards;
+          animation: opac-fix 2s forwards;
+  -webkit-animation-delay: 20s;
+          animation-delay: 20s;
+}
+main #resume-links a {
+  text-align: center;
+  max-width: 40vw;
+  width: 20rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  margin: 1rem;
+  border: 3px solid rgb(12, 58, 58);
+  background-color: rgb(8, 19, 36);
+  border-radius: 10px;
+  color: white;
+}
+main .project-list h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 900px) {
+  main .project-list h2 {
+    font-size: 3rem;
+  }
+}
+main .project-list h3 {
+  text-align: center;
+  margin: 1rem 0 0 0;
+  padding: 1rem 0 0 0;
+}
+main .project-list .tech-logos {
+  padding: 1rem;
+  margin: 3rem 0;
+  box-shadow: 0 0 25px 10px rgba(28, 71, 121, 0.938);
+  display: flex;
+  flex-wrap: wrap;
+  background: rgba(104, 96, 223, 0.74);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: unset;
+  justify-content: center;
+}
+main .project-list .tech-logos img {
+  padding: 1vh;
+  height: 10vh;
+  width: 20vw;
+}
+@media (min-width: 900px) {
+  main .project-list .tech-logos img {
+    height: 10vh;
+    width: 10vw;
+  }
+}
+main .project-list .project-cards {
+  background-color: rgb(20, 19, 65);
+  margin: 0;
+  padding: 0;
+  font-size: 0.9rem;
+}
+main .project-list .project-cards .card {
+  display: grid;
+  gap: 30px;
+  color: lavender; /*rgb(230, 229, 231); */
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+  box-shadow: 0 0 25px 10px rgb(8, 19, 36);
+  margin: 2rem 0rem;
+  padding: 1rem 1rem;
+}
+@media (min-width: 900px) {
+  main .project-list .project-cards .card {
+    grid-template-columns: 1fr 2fr;
+    margin: 1rem 2rem;
+    padding: 1rem;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    max-width: 70%;
+  }
+}
+main .project-list .project-cards .card h3 {
+  text-align: center;
+  margin: 1rem;
+}
+main .project-list .project-cards .card a {
+  margin: 1rem 0;
+}
+main .project-list .project-cards .card .displayCol #wordleClone {
+  background-image: url("/dist/images/WordleClone.PNG");
+  width: 250px;
+  height: 310px;
+  background-repeat: no-repeat;
+  display: block;
+}
+main .project-list .project-cards .card .displayCol #collaboards {
+  background-image: url("/dist/images/Collaboards.PNG");
+  width: 90vw;
+  height: 30vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 900px) {
+  main .project-list .project-cards .card .displayCol #collaboards {
+    width: 27vw;
+    height: 30vh;
+  }
+}
+main .project-list .project-cards .card .displayCol .projectSublinks {
+  display: flex;
+}
+main .project-list .project-cards .card .displayCol .projectSublinks a {
+  text-decoration: none;
+  color: rgb(0, 240, 220);
+  padding: 0.3rem;
+  border-radius: 0.3rem;
+}
+main .project-list .project-cards .card .displayCol .projectSublinks a:hover {
+  background: rgb(9, 121, 173);
+}
+main .project-list .project-cards .card .displayCol .herokuwarn {
+  border-top: rgb(6, 103, 238) solid 1px;
+  padding: 1rem 0;
+  border-bottom: rgb(6, 103, 238) solid 1px;
+  margin: 1rem 0;
+}
+main .project-list .project-cards .card .displayCol .herokuwarn span {
+  color: rgb(0, 255, 191);
+}
+main .project-list .project-cards .card .displayCol ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+@media (min-width: 900px) {
+  main .project-list .project-cards .card .displayCol ul {
+    display: block;
+    justify-content: unset;
+  }
+}
+main .project-list .project-cards .card .displayCol ul li {
+  display: block;
+  margin: 2vw 2vh;
+}
+main .project-list .project-cards .card .displayCol ul li::before {
+  content: "•";
+  color: rgb(6, 103, 238);
+  font-weight: bold;
+  display: inline-block;
+  width: 1rem;
+  margin-left: -1rem;
+}
+main .project-list .project-cards .card .displayCol a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+main .project-list .project-cards .card .discussionCol {
+  display: grid;
+  row-gap: 3rem;
+}
+main .project-list .project-cards .card .discussionCol .begin {
+  border-top: rgb(6, 103, 238) solid 1px;
+}
+footer {
+  font-size: 1rem;
+  position: fixed;
+  bottom: 0.4rem;
+  right: 1rem;
+  text-align: right;
+  padding: 1rem;
+  color: lavender;
+}
+
+/** typewriter effect styles **/
+.type {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.type::after {
+  margin-right: 1rem;
+  content: "";
+  position: absolute;
+  right: -1.3rem;
+  width: 2px;
+  height: 1em;
+}
+
+.typing::after {
+  line-height: 0;
+  position: absolute;
+}
+
+.typedone::after {
+  border-right: 2px solid white;
+  -webkit-animation: blink 1s infinite steps(1);
+          animation: blink 1s infinite steps(1);
+}
+
+/** Animations **/
+@-webkit-keyframes fade-elem-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-elem-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes opac-fix {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes opac-fix {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes typing {
+  from {
+    background-size: 0 200%;
+  }
+}
+@keyframes typing {
+  from {
+    background-size: 0 200%;
+  }
+}
+@-webkit-keyframes blink-type {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+@keyframes blink-type {
+  50% {
+    background-position: 0 -100%, 0 0;
+  }
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,118 @@
+@import 'config';
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn {
+  position: absolute;
+  z-index: 5;
+  right: 1rem;
+  top: 1rem;
+  height: 20px;
+  width: 28px;
+  cursor: pointer;
+  @include transition-ease;
+
+  &__burger {
+    position: absolute;
+    right: 0;
+    top: 0.5rem;
+    width: 28px;
+    height: 3px;
+    background: lavender;
+    @include transition-ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top:-8px;
+      width: 28px;
+      height: 3px;
+      background: lavender;
+      @include transition-ease;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top:8px;
+      width: 28px;
+      height: 3px;
+      background: lavender;
+      @include transition-ease;
+    }
+
+    &.toggled {
+      transform: rotate(720deg);
+      background: transparent;
+      size: 0;
+
+      &::before {
+        transform: rotate(45deg) translate(5px, 6px);
+      }
+
+      &::after {
+        transform: rotate(-45deg) translate(5px, -6px);
+      }
+    }
+  }
+}
+
+header {
+  
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.9);
+    opacity: 1;
+    visibility: hidden;
+
+    &.toggled {
+      visibility: visible;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100vw;
+      overflow: hidden;
+      background: transparent;
+      list-style-type: none;
+      padding-right: 1rem;
+      transform: translateY(-100%);
+      @include transition-ease();
+
+      &.toggled {
+        transform: translateY(0%);
+      }
+
+      li {
+
+        padding: 5vh;
+
+        a.menu-nav__link {
+          text-decoration: none;
+          border-radius: 0.5rem;
+          padding: 0.4rem;
+          @include transition-ease;
+          &:hover {
+            background-color: $nav-hover;
+          }
+
+          &:hover {
+            background: $nav-hover;
+          }
+
+        }
+      }
+    }
+  }
+}

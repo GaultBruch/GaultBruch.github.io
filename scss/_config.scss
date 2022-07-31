@@ -1,0 +1,44 @@
+//Resets
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding:0;
+}
+
+//Variables
+  //Colours
+$primary-background: rgb(6,7,36);
+$primary-text-colour: lavender;
+$nav-highlight: rgba(79, 104, 136,0.95);
+$nav-hover:rgb(6, 103, 238);
+$tech-background: rgba(248, 248, 248, 0.397);
+$project-links-hover: rgb(9, 121, 173);
+$project-links: rgb(0, 240, 220);
+$secondary-background: rgb(20, 19, 65);
+
+// Mixins
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin flexCenter($direction: row) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($primary-background, 100%);
+    color: darken($primary-text-colour, 100%);
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content
+  }
+
+}

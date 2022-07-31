@@ -1,11 +1,25 @@
 const navigation = document.querySelector("nav");
+const menuNav = document.querySelector("nav ul")
 const timer = ms => new Promise(res => setTimeout(res, ms));
 
-function navBurger() {
-    if (navigation.className === "toggled") {
-        navigation.className = "";
+const menuBtn = document.querySelector('.menu-btn');
+const burger = document.querySelector('.menu-btn__burger');
+
+let showMenu = false;
+
+menuBtn.addEventListener('click', toggleMenu);
+
+function toggleMenu() {
+    if(!showMenu) {
+        burger.classList.add('toggled');
+        navigation.classList.add('toggled');
+        menuNav.classList.add('toggled');
+        showMenu = true;   
     } else {
-        navigation.className = "toggled";
+        burger.classList.remove('toggled');
+        navigation.classList.remove('toggled');
+        menuNav.classList.remove('toggled');
+        showMenu = false;
     }
 }
 

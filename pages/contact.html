@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../dist/css/contact.css">
+  <title>Document</title>
+</head>
+<body class="light">
+  <!--Navigation Menu-->
+  <header>
+    <div class="menu-btn">
+      <span class="menu-btn__burger"></span>
+    </div>
+    <img class='logo' src="../images/rocketlogo1.svg" alt="React Logo" height="60" width="60"></img>
+    
+    <nav>
+      <!--Navigation Links (Hidden for Mobile)-->
+      <ul>
+        <li><a href="../index.html" class="menu-nav__link">Home</a></li>
+        <li><a href="/pages/contact.html" class="menu-nav__link">Contact</a></li>
+        <li><a href="/pages/resume.html" class="menu-nav__link">Resume</a></li>
+      </ul>
+      <!--Burgerbar (Hidden for Desktop)-->
+      <!--<a href="javascript:void(0);" class="burger-icon" onclick="navBurger()";>
+        <i class="fa fa-bars"></i>
+      </a>-->
+    </nav>
+  </header>
+
+  <article>
+    
+    <h2>Get in contact!</h2>
+    <h3>
+      Email, Phone, and Organization (or any combination of) are necessary for a returned call/email.
+      
+    </h3>
+    <form action="https://formsubmit.co/gibmac@outlook.com" method="POST">
+      <h2>Contact Form</h2>
+      <div>
+        <label for="name">Name:
+          <input required type="text" name="name" id="name" />
+        </label>
+
+        <label for="email">Email:
+          <input type="email" name="email" id="email" />
+        </label>
+
+        <label for="phone">Phone #:
+          <input type="tel" name="phone" id="phone" />
+        </label>
+      </div>
+
+
+      
+      <div class="form-email-section">
+        <label>Email body:</label>
+        <textarea name="comments" rows="12" cols="40" placeholder="Please put your message here"></textarea>
+      </div>
+      <div class="submit-div">
+        <input type="submit" name="submit" value="Send" />
+        <input type="reset" name="reset" value="Clear Form" />
+      </div>
+    </form>
+  </article>
+  <script src='../main.js' defer></script>
+</body>
+</html>

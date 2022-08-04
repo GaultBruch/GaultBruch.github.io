@@ -1,31 +1,106 @@
+@import 'menu';
 @import 'config';
 
 @mixin transition-ease {
   transition: all 0.5s ease-in-out;
 }
 
-body {
-  background-color: $primary-background;
-  color: $primary-text-colour;
-  height: 100vh;
-  font-family: consolas;
-  line-height: 1;
+div.preamble {
+  margin: 1rem;
+  margin-top: 3rem;
 
-
-  @include desktop {
-
+  h1 {
+    margin-bottom: 1rem;
   }
 }
 
-.logo {
-  top: 0;
+ul {
+  padding-left: 1rem;
+  list-style-type: square;
+  
+  li {
+    margin: 0.3rem;
+  }
 }
 
-a {
-  color: $primary-text-colour;
-  text-decoration: none;
+p {
+  text-indent: 1rem;
 }
 
+
+article.online-resume {
+  width: 60rem;
+  max-width: 90%;
+  background: rgb(255, 255, 255);
+  margin: 5vw;
+  color: black;
+  font-size: 0.7rem;
+  padding-bottom: 1rem;
+
+  .resume-header {
+    padding: 1rem;
+    background-color: rgb(29, 29, 29);
+    color: lavender;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .resume-body {
+    margin: 1rem;
+
+    ul {
+      list-style-type: square;
+    }
+
+
+    .card {
+      padding: 0.4rem;
+      margin: 0.3rem;
+      
+
+      h3 {
+        margin-bottom: 0.3rem;
+        font-size: 0.7rem;
+      }
+
+      h4 {
+        margin-bottom: 0.4rem;
+        border-bottom: black solid 1px;
+      }
+
+      section {
+        margin: 1rem 0;
+        padding: 0.5rem;
+        border-left: rgb(255, 115, 0) solid 2px;
+      }
+
+      ul {
+        margin: 1rem;
+        list-style-type: square;
+        
+        li::before {
+          content: "\200B";
+        }
+
+        li {
+          margin: 0.3rem;
+        }
+      }
+    }
+
+    h2 {
+      color: orangered;
+      border-bottom: orangered double 3px;
+      margin: 1rem 0rem;
+      font-weight: lighter;
+      font-size: 1rem;
+    }
+  }
+}
+
+/*
 .menu-btn {
   position: absolute;
   z-index: 5;
@@ -84,7 +159,7 @@ a {
       }
     }
   }
-}
+}*/
 
 header {
   

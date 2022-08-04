@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .home {
   height: 66vh;
-  padding: 5vh 0 10vh 0;
+  padding: 60px 0 10vh 0;
   overflow: hidden;
 }
 
@@ -9,6 +9,22 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+body {
+  background-color: rgb(6, 7, 36);
+  color: lavender;
+  height: 100vh;
+  font-family: consolas;
+  line-height: 1;
+}
+.logo {
+  top: 0;
+}
+
+a {
+  color: lavender;
+  text-decoration: none;
 }
 
 .menu-btn {
@@ -20,6 +36,12 @@
   width: 28px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
+}
+@media (min-width: 900px) {
+  .menu-btn {
+    display: none;
+    position: static;
+  }
 }
 .menu-btn__burger {
   position: absolute;
@@ -70,6 +92,12 @@ header nav {
   opacity: 1;
   visibility: hidden;
 }
+@media (min-width: 900px) {
+  header nav {
+    visibility: visible;
+    position: static;
+  }
+}
 header nav.toggled {
   visibility: visible;
 }
@@ -87,11 +115,23 @@ header nav ul {
   transform: translateY(-100%);
   transition: all 0.5s ease-in-out;
 }
+@media (min-width: 900px) {
+  header nav ul {
+    flex-direction: row;
+    height: unset;
+    transform: translateY(0%);
+  }
+}
 header nav ul.toggled {
   transform: translateY(0%);
 }
 header nav ul li {
   padding: 5vh;
+}
+@media (min-width: 900px) {
+  header nav ul li {
+    padding: 30px;
+  }
 }
 header nav ul li a.menu-nav__link {
   text-decoration: none;
@@ -119,6 +159,12 @@ body {
   font-family: consolas;
   line-height: 1;
 }
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
 a {
   color: lavender;
   text-decoration: none;
@@ -149,7 +195,7 @@ main #resume-links a {
   text-align: center;
   max-width: 40vw;
   width: 20rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-decoration: none;
   padding: 0.5rem;
   margin: 1rem;

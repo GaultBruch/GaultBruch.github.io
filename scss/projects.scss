@@ -1,29 +1,8 @@
+@import 'menu';
 @import 'config';
 
-@mixin transition-ease {
-  transition: all 0.5s ease-in-out;
-}
-
 body {
-  background-color: $primary-background;
-  color: $primary-text-colour;
-  height: 100vh;
-  font-family: consolas;
-  line-height: 1;
-
-
-  @include desktop {
-
-  }
-}
-
-.logo {
-  top: 0;
-}
-
-a {
-  color: $primary-text-colour;
-  text-decoration: none;
+  background: black;
 }
 
 .menu-btn {

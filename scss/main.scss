@@ -7,6 +7,8 @@
   @return map-get($font-weights, $weight-name);
 }
 
+
+
 body {
   background-color: $primary-background;
   color: $primary-text-colour;
@@ -20,7 +22,11 @@ body {
   }
 }
 
-
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 
 a {
   color: $primary-text-colour;
@@ -49,7 +55,7 @@ main {
       text-align: center;
       max-width: 40vw;
       width: 20rem;
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-decoration: none;
       padding: 0.5rem;
       margin: 1rem;

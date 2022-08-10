@@ -5,10 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../dist/css/resume.css">
-  <title>Document</title>
+  <link rel="icon" href="../images/rocketlogo1.svg" />
+  <title>GBruch Online Resume</title>
 </head>
 <body class="light">
-  <!--Navigation Menu-->
+
+  
   <header>
     <div class="menu-btn">
       <span class="menu-btn__burger"></span>
@@ -16,21 +18,17 @@
     <img class='logo' src="../images/rocketlogo1.svg" alt="React Logo" height="60" width="60"></img>
     
     <nav>
-      <!--Navigation Links (Hidden for Mobile)-->
+      
       <ul>
         <li><a href="../index.html" class="menu-nav__link">Home</a></li>
         <li><a href="/pages/contact.html" class="menu-nav__link">Contact</a></li>
         <li><a href="/pages/resume.html" class="menu-nav__link">Resume</a></li>
       </ul>
-      <!--Burgerbar (Hidden for Desktop)-->
-      <!--<a href="javascript:void(0);" class="burger-icon" onclick="navBurger()";>
-        <i class="fa fa-bars"></i>
-      </a>-->
     </nav>
   </header>
   <div class="preamble">
     <h1>Resume</h1>
-    <p>If you're looking instead for a pdf version, you can download one here (atag with download link and file size).</p>
+    <p>If you're looking instead for a pdf version, you can download one here <a href="../GBruch Online Resume.pdf" class="resumedownload">Resume (58kB)</a>.</p>
   </div>
 
   <article class="online-resume">
@@ -43,20 +41,22 @@
 
     <div class="resume-body">
       <h2>Personal Summary</h2>
-      <p>I am an ex-research student turned web developer, pulling on my previous years of coding both in an academic and personal sense. I have on-site experience connecting and automating hardware and software packages, with much of my previous work being in python. During my time learning web development, I have specialized myself mostly in react, and am working to garner a solid foundation in fullstack development. I am most familiar with the MERN stack, but I believe my previous experience
+      <p>I am an ex-research student turned web developer, pulling on my previous years of coding both in an academic and personal sense. I have on-site experience connecting and automating hardware and software packages, with much of my previous work being in Python. During my time learning web development, I have specialized myself mostly in React as a frontend framework, and am working to garner a solid foundation in fullstack development. I am most familiar with the MERN stack, but I believe my previous experience
         allows for solid adaptation to other stacks and roles as necessary. My web development journey has been a self taught one, but I have attempted to consider the roles and challenges I would face in larger companies into my roadmap.
+        I am always looking forward to new opportunities for learning, and believe personal development is the forefront of professional development.
       </p>
 
       <h2>Technical Background</h2>
       <ul>
         <li>Foundational understanding of the MERN stack, having built a project from the ground up from backend to frontend from a self built software requirement sheet.</li>
+        <li>Experience building relational (SQL Server) and document based (MongoDB) databases for frontend consumption</li>
         <li>Background in React 16, using both class and functional components.</li>
         <li>Experience building and consuming RESTful APIs</li>
-        <li>Understanding of HTML, CSS3, and current javascript ES6 practices (This site is built with it!)</li>
+        <li>Understanding of HTML, CSS3, and current JavaScript ES6 practices (This site is built with it!)</li>
         <li>Utilized Figma to build out templates for website designs</li>
-        <li>Work experience with computer pairing and hardware automation using a self-built socket webserver.</li>
+        <li>Work experience with computer pairing and hardware automation using a self-built socket server.</li>
         <li>Experience with Python program optimization using GPU computing and LLVM conversion to speed up computational calculations for molecular simulations.</li>
-        <li>Experience working with machine learning packages (Tensorflow, PyTorch)</li>
+        <li>Experience working with machine learning packages (Tensorflow, PyTorch) as well as building small machine learning projects in Python</li>
       </ul>
 
       <h2>Education</h2>
@@ -68,7 +68,7 @@
         
         <ul>
           <li>Specialized in x-ray diffraction techniques and surface analysis</li>
-          <li>Worked with python code on a variety of on-the-job and academic projects</li>
+          <li>Worked with Python code on a variety of on-the-job and academic projects</li>
           <li>Collaborated with scientific teams to build and operate new experiments</li>
           <li>Ran an initiative to introduce Arduino projects into laboratories</li>
         </ul>
@@ -81,20 +81,20 @@
 
           <h3>Computer Science and Programming</h3>
           <h4>2018</h4>
-          <p>Program exploring the fundamentals of computer computation using python as a guiding language</p>
+          <p>Program exploring the fundamentals of computer computation using Python as a guiding language</p>
         </section>
 
         <section>
           <h3>Quantum Physics I/II</h3>
           <h4>2019-2021</h4>
-          <p>Coursework covering quantum dynamics and perturbation theory, along with common subjects covered in quantum mechanics courses.</p>
+          <p>Coursework covering quantum dynamics and perturbation theory, along with common subjects covered in quantum mechanics courses</p>
         </section>
       </div>
 
       <div class="card">
         <h3 class='education-head'>Stanford Online, Machine Learning</h3>
         <h4>2019</h4>
-        <p>Introductory course to machine learning theory and it's applications in real world problems for data set analysis</p>
+        <p>Introductory course to machine learning theory and its applications in real world problems for data set analysis</p>
       </div>
 
       <h2>Work Experience</h2>
@@ -105,8 +105,8 @@
         <p>University of Saskatchewan, Saskatoon SK</p>
 
         <ul>
+          <li>Connected hardware and built an interfacing script through computer bank socket interface to allow automation of a cryostream, providing greater automation capabilities for user groups.</li>
           <li>Worked to organize and scan sample sets, as well as automate scanning processes for overnight work using the beamline SPEC coding language.</li>
-          <li>Connected hardware and built an interfacing script through computer bank socket interface to allow automation of a cryocooler, providing greater automation capabilities for user groups.</li>
           <li>Applied scattering theory for x-ray diffraction studies to real world software creation and analysis of powder, crystalline, and amorphous samples</li>
           <li>Worked in on-site lithography and chemical laboratories to build microfluidic devices for use on the Brockhouse Beamline to analyze chemical reactions in real time.</li>
         </ul>
@@ -133,17 +133,15 @@
           <li>Selected by Community Programs Lead to take charge of multiple tasks involving reorganization and updating of facilities and technological equipment</li>
           <li>Worked closely with other departments to update safety procedures, which ensured a smooth and safe transition during an emergency</li>
           <li>Filed, documented, and requested weekly medical forms, parent notes, and attendance sheets</li>
-          <li>Worked closely with parents and patrons to resolve "conflicts" but don't say conflicts</li>
+          <li>Worked closely with parents and patrons to resolve issues and concerns </li>
         </ul>
       </div>
 
       <h2>Accomplishments & Achievements</h2>
       <ul>
         <li>Founded Arduino Group at the Uniersity of Guelph</li>
-        <li>Worked with staff and students in the university to begin a group focused on learning and implementing Arduino modules in student research</li>
-
-        <li>University of Guelph 2018 -2021 School Year Dean's List</li>
-        <li>Award for >80% average for all classes three years in a row</li>
+        <li>Worked with staff and students in the university to begin a group focused on implementing Arduino modules in student research</li>
+        <li>University of Guelph 2018 -2021 School Year Dean's List (Award for >80% average for all classes)</li>
       </ul>
     </div>
   </article>

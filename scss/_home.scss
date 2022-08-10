@@ -1,5 +1,11 @@
+@import 'config';
+
 .home {
-  height: 66vh;
+  height: 70vh;
   padding: 60px 0 10vh 0 ;
   overflow: hidden;
+
+  @include desktop {
+    padding: 0;
+  }
 }

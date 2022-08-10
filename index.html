@@ -7,6 +7,7 @@
 	<title>Gault Bruch Online Portfolio</title>
 	<link rel="stylesheet" href="dist/css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+	<link rel="icon" href="images/rocketlogo1.svg" />
 	<!-- Above is simply to get our burger bar, perhaps we can shorten that in the future. -->
 </head>
 	<body class="light">
@@ -36,12 +37,12 @@
 			<section class="home">
 				<h1 class="starterh1">C:/Users/Guest></h1><h1 class="starterh1 type" texCon='Gault Bruch, Web Developer'>Loading Portfolio...</h1> <!--Add> blinker to end, maybe ::after tag-->
 				<p class="type" texCon="I'm a self taught web developer from Alberta, Canada. Take a look around! My projects are displayed below"></p>
-				<p class="type" texCon="If you like what you see feel free to get in contact, either through email,"></p>
-				<p class="email type" texCon="Email: gibmac@outlook.com"></p>
-				<p class="type"texCon="Or through the contact page"></p>
+				<p class="type" texCon="If you like what you see feel free to get in contact via the contact page,"></p>
+				<p class="type" texCon="or through email:"></p>
+				<p class="email type" texCon="gibmac@outlook.com"></p>
 				<!--Relevant Resume and Github links ## add in some logos-->
 				<div id="resume-links">
-					<a class="resume" href="#">Resume <i class="fa fa-file"></i></a>
+					<a class="resume" href="/pages/resume.html">Resume <i class="fa fa-file"></i></a>
 					<a class="github" href="https://github.com/GaultBruch">Github <i class="fa fa-github" aria-hidden="true"></i></a>
 				</div>
 			</section>
@@ -49,121 +50,163 @@
 				<h2 class="type" texCon="My Projects"></h2>
 				
 				<div class="project-cards">
+
 					<h3>Tech Stacks</h3>
 					<section class="tech-logos">
-									<a href="#"><img src="images/React Logo.svg" alt="React Logo" height="90" width="90"/></a>
-									<a href="#"><img src="images/Figma.svg" alt="Figma Logo" height="90" width="90" /></a>
-									<a href="#"><img src="images/Node.js_logo.svg" alt="Nodejs Logo" height="90" width="90"/></a>
-									<a href="#"><img src="images/MongoDB_Logo_FullColorBlack_RGB.svg" alt="MongoDB Logo" height="90" width="240" /></a>
-									<a href="#"><img src="images/TypeScript logo.svg" alt="Typescript Logo" height="90" width="90" /></a>
-									<a href="#"><img src="images/Sass_Logo_Color.svg" alt="Sass Logo" height="90" width="90" /></a>
-							</section>
-							<article class="card">
+						<a href="#"><img src="images/React Logo.svg" alt="React Logo" height="90" width="90"/></a>
+						<a href="#"><img src="images/Figma.svg" alt="Figma Logo" height="90" width="90" /></a>
+						<a href="#"><img src="images/Node.js_logo.svg" alt="Nodejs Logo" height="90" width="90"/></a>
+						<a href="#"><img src="images/MongoDB_Logo_FullColorBlack_RGB.svg" alt="MongoDB Logo" height="90" width="240" /></a>
+						<a href="#"><img src="images/TypeScript logo.svg" alt="Typescript Logo" height="90" width="90" /></a>
+						<a href="#"><img src="images/Sass_Logo_Color.svg" alt="Sass Logo" height="90" width="90" /></a>
+					</section>
+
+						<article class="card">
 							<div class="displayCol">
-									<h3>Wordle Clone</h3>
-									<a href="https://gaultbruch.github.io/wordle-clone/" id="wordleClone"></a>
-									<div class="projectSublinks">
-											<a href="https://github.com/GaultBruch/wordle-clone"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
-											<a href="https://gaultbruch.github.io/wordle-clone/"><i class="fa fa-desktop"></i> Website</a>
-									</div>
-									<h3>Technologies used</h3>
+
+								<h3>Collaboards</h3>
+								<a href="https://merncollaboardsgbruch.herokuapp.com/" id="collaboards"></a>
+								<div class="projectSublinks">
+									<a href="https://github.com/GaultBruch/collaboards"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+									<a href="https://merncollaboardsgbruch.herokuapp.com/"><i class="fa fa-desktop"></i> Website</a>
+								</div>
+								<p class="herokuwarn">This site is running off a free heroku server, so on <span>initial load it can be a bit slow.</span> There is a guest account, which is reset on exit, so feel free to mess around!</p>
+								<h3>Technologies used</h3>
+								<ul>
+									<li>ReactJS</li>
+									<li>MongoDB</li>
+									<li>NodeJS</li>
+									<li>ExpressJS</li>
+									<li>Axios</li>
+									<li>Figma</li>
+								</ul>
+
+								<section>
+									<h3>Highlights</h3>
 									<ul>
-											<li>ReactJS</li>
-											<li>CSS3</li>
+										<li>Full MERN Stack application</li>
+										<li>Registration/Login of new users</li>
+										<li>Webtoken authentication with JSON web tokens</li>
+										<li>Backend route protection</li>
+										<li>Deadline tracker for ongoing projects</li>
 									</ul>
+								</section>
 							</div>
+								
 							<div class="discussionCol">
-									<div class="begin">
+								<div class="begin">
+									<h3>Overview</h3>
+									<p>
+										This is a full stack MERN application for organizing task lists for multiple projects, and features a deadline system. Obviously on a small scale that can be done in a notebook, but I wanted a list I could easily access across multiple devices anywhere I was.
+										This lead me to a full stack application, and having a solid foundation of a react frontend I decided on the MERN stack. Before the project started I created a software requirements specification (SRS sheet) to get me started on the right track and provide direction to the project.
+									</p>
+								</div>
+								<div class="main">
+									<h3>Project Difficulties</h3>
+									<p>
+										During the project I had decided on Auth0 to run user authentication, rather than a custom made service, as I thought that an auth0 service would be easily extendable. Sadly, Auth0 does not handle custom user databases well, and it became apparent that it would be 
+										more of a headache than a boon. I lost about 2 weeks of progress on the project after deciding to remove auth0, but the rest of the project proceeded much smoother with custom authentication instead.
+									</p>
+								</div>
+								<div class="end">
+									<h3>End Result</h3>
+									<p>
+										Overall, I am extremely happy with how this project turned out, although some features have been left to later updates in the interest of time. As my first large project this taught me a lot about not only the technologies involved and the process of getting a (rudimentary) full stack application running, but also how to manage tasks and long term goals within larger web based coding projects.
+										There are more updates for the service planned for the future, and I currently use it on my own projects to provide a ledger of goals and completed work.
+									</p>
+								</div>
+							</div>
+						</article>
+						
+						<article class="card">
+							<div class="displayCol">
+								<h3>Certification Tracker (UNDER DEVELOPMENT)</h3>
+								<a href="https://github.com/GaultBruch/Certification-Tracker.git" id="certification"></a>
+								<div class="projectSublinks">
+									<a href="https://github.com/GaultBruch/Certification-Tracker.git"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+								</div>
+								<h3>Technologies used</h3>
+								<ul>
+									<li>ReactJS</li>
+									<li>MySQL</li>
+									<li>NodeJS</li>
+									<li>ExpressJS</li>
+								</ul>
+
+								<section>
+									<h3>Highlights</h3>
+									<ul>
+
+									</ul>
+								</section>
+								
+							</div>
+												
+									<div class="discussionCol">
+										<div class="begin">
 											<h3>Overview</h3>
 											<p>
-													This was my first react project, and an opportunity to learn more about the structure for building an app, and was a good introduction to the use of state and props.
-											</p>
+												This idea came about after discussion with a team lead for a organization in my town realizing that it was a bit frustrating trying to get all
+												the certifications for large teams tracked. I set up an excel file for them, but due to the fact that many people could access it the file logic was destroyed accidentally.
+												Instead, it would be convenient for a consistent way for people to only see the certifications they need to see, while also allowing team leads to access their team members certification list.
+													Additionally, I also wanted it to be able to send emails off to team leads as well as signed up members if they are about to miss out on a certification.
+												</p>
+												<p>Beyond the practicality from a business standpoint, I chose to try out SQL for this server, since I wanted practice using it in a hierarchical dataset.</p>
+											</div>
+											<div class="main">
+												<h3>Project Difficulties</h3>
+												<p>
+													Empty for now, still in progress!
+												</p>
+											</div>
+											<div class="end">
+												<h3>End Result</h3>
+												<p>
+													Empty for now, still in progress!
+												</p>
+											</div>
+										</div>
+									</article>
+
+						<article class="card">
+							<div class="displayCol">
+								<h3>Wordle Clone</h3>
+								<a href="https://gaultbruch.github.io/wordle-clone/" id="wordleClone"></a>
+								<div class="projectSublinks">
+									<a href="https://github.com/GaultBruch/wordle-clone"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+											<a href="https://gaultbruch.github.io/wordle-clone/"><i class="fa fa-desktop"></i> Website</a>
+										</div>
+										<h3>Technologies used</h3>
+										<ul>
+											<li>ReactJS</li>
+											<li>CSS3</li>
+										</ul>
 									</div>
-									<div class="middle">
+									<div class="discussionCol">
+										<div class="begin">
+											<h3>Overview</h3>
+											<p>
+												This was my first react project, and an opportunity to learn more about the structure for building an app, and was a good introduction to the use of state and props.
+											</p>
+										</div>
+										<div class="middle">
 											<h3>Project Difficulties</h3>
 											<p>
-													A lot of the difficulties from this project came from a lack of understanding of react architecture. Halfway through the project I had to rewrite the state architecture, as the 
-													game winstate was not being calculated correctly. Beyond the win state, this code tested my scripting abilities within the react framework. While a similar project in a language like
-													python or C is relatively straightforward, the displaying of the resulting keypresses and updating of the colours of the squares on the frontend did pose a challenge initially.
+												A lot of the difficulties from this project came from a lack of understanding of react architecture. Halfway through the project I had to rewrite the state architecture, as the 
+												game winstate was not being calculated correctly. Beyond the win state, this code tested my scripting abilities within the react framework. While a similar project in a language like
+												python or C is relatively straightforward, the displaying of the resulting keypresses and updating of the colours of the squares on the frontend did pose a challenge initially.
 											</p>
-									</div>
+										</div>
 									<div class="end">
 											<h3>End Result</h3>
 											<p>I'm fairly happy with how the end result turned out, especially on the scripting side to get the backend working. As this was a test project for react I did not focus
 													too heavily on presentation, something that could be improved if I were to do it over again.
-											</p>
-									</div>
-							</div>
-									
-
-							</article>
-
-							<article class="card">
-									<div class="displayCol">
-											<h3>Collaboards</h3>
-											<a href="https://merncollaboardsgbruch.herokuapp.com/" id="collaboards"></a>
-											<div class="projectSublinks">
-												<a href="https://github.com/GaultBruch/collaboards"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
-												<a href="https://merncollaboardsgbruch.herokuapp.com/"><i class="fa fa-desktop"></i> Website</a>
+												</p>
 											</div>
-											<p class="herokuwarn">This site is running off a free heroku server, so on <span>initial load it can be a bit slow.</span> There is a guest account, which is reset on exit, so feel free to mess around!</p>
-											<h3>Technologies used</h3>
-											<ul>
-													<li>ReactJS</li>
-													<li>MongoDB</li>
-													<li>NodeJS</li>
-													<li>ExpressJS</li>
-													<li>Axios</li>
-													<li>Figma</li>
-											</ul>
+										</div>
+									</article>
 
-											<section>
-													<h3>Highlights</h3>
-													<ul>
-															<li>Full MERN Stack application</li>
-															<li>Registration/Login of new users</li>
-															<li>Webtoken authentication with JSON web tokens</li>
-															<li>Backend route protection</li>
-															<li>Deadline tracker for ongoing projects</li>
-													</ul>
-											</section>
-									</div>
-									
-									<div class="discussionCol">
-											<div class="begin">
-													<h3>Overview</h3>
-													<p>
-															This is a full stack MERN application for organizing task lists for multiple projects, and features a deadline system. Obviously on a small scale that can be done in a notebook, but I wanted a list I could easily access across multiple devices anywhere I was.
-															This lead me to a full stack application, and having a solid foundation of a react frontend I decided on the MERN stack. Before the project started I created a software requirements specification (SRS sheet) to get me started on the right track and provide direction to the project.
-													</p>
-											</div>
-											<div class="main">
-													<h3>Project Difficulties</h3>
-													<p>
-															During the project I had decided on Auth0 to run user authentication, rather than a custom made service, as I thought that an auth0 service would be easily extendable. Sadly, Auth0 does not handle custom user databases well, and it became apparent that it would be 
-															more of a headache than a boon. I lost about 2 weeks of progress on the project after deciding to remove auth0, but the rest of the project proceeded much smoother with custom authentication instead.
-													</p>
-											</div>
-											<div class="end">
-													<h3>End Result</h3>
-													<p>
-															Overall, I am extremely happy with how this project turned out, although some features have been left to later updates in the interest of time. As my first large project this taught me a lot about not only the technologies involved and the process of getting a (rudimentary) full stack application running, but also how to manage tasks and long term goals within larger web based coding projects.
-															There are more updates for the service planned for the future, and I currently use it on my own projects to provide a ledger of goals and completed work.
-
-													</p>
-											</div>
-									</div>
-									
-
-							</article>
-
-							<article class="card">
-									<h3>Project 3</h3>
-									<img src="" alt="Image Description">
-									<p>Project Description Below</p>
-
-							</article>
-					</div>
+								</div>
 			</section>
 		</main>
 		<footer></footer>

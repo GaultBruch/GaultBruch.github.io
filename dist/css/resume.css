@@ -15,6 +15,11 @@ body {
 .logo {
   top: 0;
 }
+@media (min-width: 900px) {
+  .logo {
+    position: absolute;
+  }
+}
 
 a {
   color: lavender;
@@ -152,6 +157,9 @@ div.preamble {
 }
 div.preamble h1 {
   margin-bottom: 1rem;
+}
+div.preamble p a {
+  color: rgb(255, 115, 0);
 }
 
 ul {

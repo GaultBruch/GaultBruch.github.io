@@ -14,6 +14,11 @@ body {
 .logo {
   top: 0;
 }
+@media (min-width: 900px) {
+  .logo {
+    position: absolute;
+  }
+}
 
 a {
   color: lavender;
@@ -153,8 +158,7 @@ h2 {
 h3 {
   padding: 0.8rem;
   font-size: 0.9rem;
-  text-align: justify;
-  text-justify: inter-character;
+  text-align: center;
 }
 
 form {
@@ -162,6 +166,17 @@ form {
   color: black;
   margin: 3rem 0rem;
   padding: 1rem;
+}
+@media (min-width: 900px) {
+  form {
+    margin: 1rem 2rem;
+    padding: 1rem;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    max-width: 50%;
+    margin: 0 auto;
+  }
 }
 form h2 {
   padding: 1rem;

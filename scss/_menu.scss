@@ -19,6 +19,10 @@ body {
 
 .logo {
   top: 0;
+
+  @include desktop {
+    position: absolute;
+  }
 }
 
 a {

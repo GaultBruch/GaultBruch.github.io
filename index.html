@@ -35,15 +35,21 @@
 		
 		<main>
 			<section class="home">
-				<h1 class="starterh1">C:/Users/Guest></h1><h1 class="starterh1 type" texCon='Gault Bruch, Web Developer'>Loading Portfolio...</h1> <!--Add> blinker to end, maybe ::after tag-->
-				<p class="type" texCon="I'm a self taught web developer from Alberta, Canada. Take a look around! My projects are displayed below"></p>
-				<p class="type" texCon="If you like what you see feel free to get in contact via the contact page,"></p>
-				<p class="type" texCon="or through email:"></p>
-				<p class="email type" texCon="gibmac@outlook.com"></p>
-				<!--Relevant Resume and Github links ## add in some logos-->
-				<div id="resume-links">
-					<a class="resume" href="/pages/resume.html">Resume <i class="fa fa-file"></i></a>
-					<a class="github" href="https://github.com/GaultBruch">Github <i class="fa fa-github" aria-hidden="true"></i></a>
+				<div class="terminal-container">
+
+					<section class="terminal">
+						<h1 class="starterh1">C:/Users/Guest></h1><h1 class="starterh1 type" texCon='Gault Bruch, Web Developer'>Loading Portfolio...</h1> <!--Add> blinker to end, maybe ::after tag-->
+						<p class="type" texCon="I'm a self taught web developer from Alberta, Canada. Take a look around! My projects are displayed below."></p>
+						<p class="type" texCon="If you like what you see feel free to get in contact via the contact page,"></p>
+						<p class="type" texCon="or through email:"></p>
+						<p class="email type" texCon="gibmac@outlook.com"></p>
+						<!--Relevant Resume and Github links ## add in some logos-->
+						<div id="resume-links">
+							<a class="resume" href="/pages/resume.html">Resume <i class="fa fa-file"></i></a>
+							<a class="github" href="https://github.com/GaultBruch">Github <i class="fa fa-github" aria-hidden="true"></i></a>
+							
+						</div>
+					</section>
 				</div>
 			</section>
 			<section class="project-list">
@@ -52,13 +58,16 @@
 				<div class="project-cards">
 
 					<h3>Tech Stacks</h3>
+					<p>Click any of the links to reach the homepage for a specific tool</p>
 					<section class="tech-logos">
-						<a href="#"><img src="images/React Logo.svg" alt="React Logo" height="90" width="90"/></a>
-						<a href="#"><img src="images/Figma.svg" alt="Figma Logo" height="90" width="90" /></a>
-						<a href="#"><img src="images/Node.js_logo.svg" alt="Nodejs Logo" height="90" width="90"/></a>
-						<a href="#"><img src="images/MongoDB_Logo_FullColorBlack_RGB.svg" alt="MongoDB Logo" height="90" width="240" /></a>
-						<a href="#"><img src="images/TypeScript logo.svg" alt="Typescript Logo" height="90" width="90" /></a>
-						<a href="#"><img src="images/Sass_Logo_Color.svg" alt="Sass Logo" height="90" width="90" /></a>
+						<a href="https://reactjs.org/"><img src="images/React Logo.svg" alt="React Logo" height="90" width="90"/></a>
+						<a href="https://www.figma.com/"><img src="images/Figma.svg" alt="Figma Logo" height="90" width="90" /></a>
+						<a href="https://nodejs.org/en/"><img src="images/Node.js_logo.svg" alt="Nodejs Logo" height="90" width="90"/></a>
+						<a href="https://www.mongodb.com/"><img src="images/MongoDB_Logo_FullColorBlack_RGB.svg" alt="MongoDB Logo" height="90" width="240" /></a>
+						<a href="https://www.typescriptlang.org/"><img src="images/TypeScript logo.svg" alt="Typescript Logo" height="90" width="90" /></a>
+						<a href="https://sass-lang.com/"><img src="images/Sass_Logo_Color.svg" alt="Sass Logo" height="90" width="90" /></a>
+						<a href="https://github.com"><img src="images/Git_icon.svg" alt="Github Logo" height="90" width="90"/></a>
+						<a href="https://tailwindcss.com"><img src="images/tailwindmark.svg" alt="Tailwind Logo" height="90" width="90"/></a>
 					</section>
 
 						<article class="card">
@@ -117,6 +126,48 @@
 								</div>
 							</div>
 						</article>
+
+						<article class="card">
+							<div class="displayCol">
+								<h3>Runners' Shack Frontpage Mockup</h3>
+								<a href="https://gaultbruch.github.io/Runners-Storefront-Page" id="runners"></a>
+								<div class="projectSublinks">
+									<a href="https://github.com/GaultBruch/Runners-Storefront-Page"><i class="fa fa-github" aria-hidden="true"></i>Github</a>
+											<a href="https://gaultbruch.github.io/Runners-Storefront-Page"><i class="fa fa-desktop"></i> Website</a>
+										</div>
+										<h3>Technologies used</h3>
+										<ul>
+											<li>ReactJS</li>
+											<li>Tailwind</li>
+											<li>Figma</li>
+											<li>NextJS</li>
+											<li>Github Actions</li>
+										</ul>
+									</div>
+									<div class="discussionCol">
+										<div class="begin">
+											<h3>Overview</h3>
+											<p>
+												I wanted a bit more experience workin on creating frontend pages, and wanted to try out a few new tools, like Tailwind and NextJS. I chose to set up a running shop frontpage advertising some shoes.
+											</p>
+										</div>
+										<div class="middle">
+											<h3>Project Difficulties</h3>
+											<p>
+												This went fairly smoothly for the most part. Tailwind was a huge boon, and I liked the functionality it allowed, but getting NextJS hosted on github lead to some small issues at the very end of the project.
+												Mainly issues arose with the way NextJS exports handle the image elements, since it doesn't interact well with Tailwind.
+											</p>
+										</div>
+									<div class="end">
+											<h3>End Result</h3>
+												<p>
+													I like the stylistic choice made on the site, but feel like I'm still a bit fresh to good designs. I liked the figma mockup a lot, and while some things had to be lost in translation,
+													for a 3 day project while learning tailwind I am overall happy with it. Because the images were sourced from online I had to do some quick editing to them to line them up, but the NextJS export 
+													issues broke that, so in another project I'd likely head back and rebuild them, but for this project it doesn't add much to my learning experience to fiddle around with it.
+												</p>
+											</div>
+										</div>
+									</article>
 						
 						<article class="card">
 							<div class="displayCol">

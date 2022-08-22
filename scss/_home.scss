@@ -8,4 +8,58 @@
   @include desktop {
     padding: 0;
   }
+
+  .terminal-container {
+    position: relative;
+  }
+
+  .terminal {
+    
+    h1 {
+      display: inline-block;
+      padding-right: 1rem;
+    }
+    
+    #resume-links {
+      padding-top: 10vh;
+      justify-content: center;
+      display: flex;
+      margin: auto;
+      opacity: 0;
+      animation: opac-fix 2s forwards;
+      animation-delay: 20s;
+      
+      a {
+        text-align: center;
+        max-width: 40%;
+        width: 20rem;
+        font-size: 1rem;
+        text-decoration: none;
+        padding: 0.5rem;
+        margin: 1rem;
+        border: 3px solid rgb(12, 58, 58);
+        background-color:rgb(8, 19, 36);
+        border-radius: 10px;
+        color: white; 
+        
+      }
+    }
+    
+    @include desktop {
+      max-width: 1000px;
+      overflow-x: hidden;
+      height: 60vh;
+      overflow-y: scroll;
+      background: black;
+      padding: 1rem;
+      margin: 1rem;
+      border: solid rgb(94, 63, 5) 2px;
+      margin: 4rem auto;
+      position: absolute;
+      top: 0;
+      left:0;
+      bottom:0;
+      right:0;
+    }
+  }
 }

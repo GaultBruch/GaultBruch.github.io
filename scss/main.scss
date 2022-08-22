@@ -36,32 +36,6 @@ main {
     font-size: 1.2rem;
   }
 
-  #resume-links {
-    padding-top: 10vh;
-    justify-content: center;
-    display: flex;
-    width: 80vw;
-    margin: auto;
-    opacity: 0;
-    animation: opac-fix 2s forwards;
-    animation-delay: 20s;
-    
-    a {
-      text-align: center;
-      max-width: 40vw;
-      width: 20rem;
-      font-size: 1rem;
-      text-decoration: none;
-      padding: 0.5rem;
-      margin: 1rem;
-      border: 3px solid rgb(12, 58, 58);
-      background-color:rgb(8, 19, 36);
-      border-radius: 10px;
-      color: white; 
-
-    }
-  }
-
   .project-list {
 
     h2 {
@@ -110,6 +84,11 @@ main {
       padding: 0;
       font-size: 0.9rem;
 
+      p {
+        margin: 1rem;
+        text-align: center;
+      }
+
       @include desktop {
     
       }
@@ -142,6 +121,15 @@ main {
         }
 
         .displayCol {
+          #runners {
+            background-image: url('../../images/Runners ScreenShot.png');
+            width: 300px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-size:contain;
+            display: block;
+
+          }
 
           #certification {
             background-image: url('../../images/Waiting_Monochromatic.svg');

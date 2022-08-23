@@ -39,12 +39,16 @@ main {
   .project-list {
 
     h2 {
-      margin-left: auto;
-      margin-right: auto;
+      text-align: center;
+      padding-bottom: 2rem;
 
       @include desktop {
         font-size: 3rem;
       }
+    }
+
+    p {
+      padding: 1rem;
     }
 
     h3 {
@@ -86,10 +90,13 @@ main {
 
       p {
         margin: 1rem;
-        text-align: center;
       }
 
       @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     
       }
 
@@ -121,6 +128,8 @@ main {
         }
 
         .displayCol {
+          border-top: $nav-hover solid 1px;
+
           #runners {
             background-image: url('../../images/Runners ScreenShot.png');
             width: 300px;
@@ -231,14 +240,6 @@ main {
 
           .begin {
             border-top: $nav-hover solid 1px;
-          }
-
-          .middle {
-
-          }
-
-          .end {
-
           }
         }
 

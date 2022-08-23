@@ -245,13 +245,16 @@ main {
   }
 }
 main .project-list h2 {
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  padding-bottom: 2rem;
 }
 @media (min-width: 900px) {
   main .project-list h2 {
     font-size: 3rem;
   }
+}
+main .project-list p {
+  padding: 1rem;
 }
 main .project-list h3 {
   text-align: center;
@@ -290,7 +293,14 @@ main .project-list .project-cards {
 }
 main .project-list .project-cards p {
   margin: 1rem;
-  text-align: center;
+}
+@media (min-width: 900px) {
+  main .project-list .project-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 main .project-list .project-cards .card {
   display: grid;
@@ -320,6 +330,9 @@ main .project-list .project-cards .card h3 {
 }
 main .project-list .project-cards .card a {
   margin: 1rem 0;
+}
+main .project-list .project-cards .card .displayCol {
+  border-top: rgb(6, 103, 238) solid 1px;
 }
 main .project-list .project-cards .card .displayCol #runners {
   background-image: url("../../images/Runners ScreenShot.png");
@@ -416,6 +429,7 @@ main .project-list .project-cards .card .discussionCol {
 main .project-list .project-cards .card .discussionCol .begin {
   border-top: rgb(6, 103, 238) solid 1px;
 }
+
 footer {
   font-size: 1rem;
   position: fixed;

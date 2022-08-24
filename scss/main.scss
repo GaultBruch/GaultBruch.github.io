@@ -41,6 +41,7 @@ main {
     h2 {
       text-align: center;
       padding-bottom: 2rem;
+      
 
       @include desktop {
         font-size: 3rem;

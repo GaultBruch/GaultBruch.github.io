@@ -43,7 +43,6 @@ function toggleMenu() {
         elem.classList.remove('typing');
         if (j == typers.length-1) {
             elem.classList.add('typedone');
-            console.log(j);
         }
     }
 }());
